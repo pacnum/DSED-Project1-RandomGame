@@ -21,6 +21,8 @@ namespace DSED_Project1_RandomGame
         public int ProtectJacket { get; set; } = 2;
         public bool IsFiringThisTurn { get; set; } = false;
 
+
+
         public void RNDGenerator()
         {
             Random rnd = new Random();

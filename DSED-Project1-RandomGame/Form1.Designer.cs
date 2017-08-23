@@ -33,6 +33,7 @@
             this.lblBulletFire = new System.Windows.Forms.Label();
             this.btnPlayAgainLose = new System.Windows.Forms.Button();
             this.btnPlayAgainWin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTurnAway = new System.Windows.Forms.Button();
@@ -40,6 +41,9 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.ptbDead = new System.Windows.Forms.PictureBox();
             this.ptbAlive = new System.Windows.Forms.PictureBox();
+            this.lblTotalGames = new System.Windows.Forms.Label();
+            this.lblTotalWinsAgain = new System.Windows.Forms.Label();
+            this.lblLoses2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlive)).BeginInit();
             this.SuspendLayout();
@@ -55,12 +59,10 @@
             // 
             // lblLoses
             // 
-            this.lblLoses.Location = new System.Drawing.Point(450, 60);
+            this.lblLoses.Location = new System.Drawing.Point(0, 0);
             this.lblLoses.Name = "lblLoses";
-            this.lblLoses.Size = new System.Drawing.Size(112, 49);
-            this.lblLoses.TabIndex = 6;
-            this.lblLoses.Text = "0";
-            this.lblLoses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLoses.Size = new System.Drawing.Size(100, 23);
+            this.lblLoses.TabIndex = 0;
             // 
             // lblBulletFire
             // 
@@ -94,6 +96,14 @@
             this.btnPlayAgainWin.Text = "PlayAgain";
             this.btnPlayAgainWin.UseVisualStyleBackColor = false;
             this.btnPlayAgainWin.Click += new System.EventHandler(this.btnPlayAgainWin_Click);
+            // 
+            // label3
+            // 
+            this.label3.Image = global::DSED_Project1_RandomGame.Properties.Resources.right__1_;
+            this.label3.Location = new System.Drawing.Point(624, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 64);
+            this.label3.TabIndex = 12;
             // 
             // label2
             // 
@@ -153,7 +163,7 @@
             // 
             this.ptbDead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbDead.Image = global::DSED_Project1_RandomGame.Properties.Resources.dead;
-            this.ptbDead.Location = new System.Drawing.Point(45, 41);
+            this.ptbDead.Location = new System.Drawing.Point(44, 35);
             this.ptbDead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptbDead.Name = "ptbDead";
             this.ptbDead.Size = new System.Drawing.Size(937, 775);
@@ -173,15 +183,44 @@
             this.ptbAlive.TabIndex = 10;
             this.ptbAlive.TabStop = false;
             // 
+            // lblTotalGames
+            // 
+            this.lblTotalGames.Location = new System.Drawing.Point(755, 60);
+            this.lblTotalGames.Name = "lblTotalGames";
+            this.lblTotalGames.Size = new System.Drawing.Size(112, 49);
+            this.lblTotalGames.TabIndex = 13;
+            this.lblTotalGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalWinsAgain
+            // 
+            this.lblTotalWinsAgain.Location = new System.Drawing.Point(755, 60);
+            this.lblTotalWinsAgain.Name = "lblTotalWinsAgain";
+            this.lblTotalWinsAgain.Size = new System.Drawing.Size(112, 49);
+            this.lblTotalWinsAgain.TabIndex = 14;
+            this.lblTotalWinsAgain.Text = "0";
+            this.lblTotalWinsAgain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoses2
+            // 
+            this.lblLoses2.Location = new System.Drawing.Point(449, 58);
+            this.lblLoses2.Name = "lblLoses2";
+            this.lblLoses2.Size = new System.Drawing.Size(112, 49);
+            this.lblLoses2.TabIndex = 15;
+            this.lblLoses2.Text = "0";
+            this.lblLoses2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1131, 924);
+            this.Controls.Add(this.lblLoses2);
+            this.Controls.Add(this.lblTotalWinsAgain);
+            this.Controls.Add(this.lblTotalGames);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnPlayAgainWin);
             this.Controls.Add(this.btnPlayAgainLose);
             this.Controls.Add(this.lblBulletFire);
-            this.Controls.Add(this.lblLoses);
             this.Controls.Add(this.lblWins);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,6 +253,10 @@
         private System.Windows.Forms.Button btnPlayAgainLose;
         private System.Windows.Forms.PictureBox ptbAlive;
         private System.Windows.Forms.Button btnPlayAgainWin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalGames;
+        private System.Windows.Forms.Label lblTotalWinsAgain;
+        private System.Windows.Forms.Label lblLoses2;
     }
 }
 

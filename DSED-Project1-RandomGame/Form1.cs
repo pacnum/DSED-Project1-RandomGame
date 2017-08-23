@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,7 @@ namespace DSED_Project1_RandomGame
         // bug fix - If the ProtectJacket is sleceted - player is stuck in an infinite loop - Closed 23-8
         // bug fix - Debug displays incorrect info after creating Data Class - bug fixed 23-8
         // bug fix - Random number not generated anymore  - Bug Fixed 23-8
+        //bug fix - if jacket is @ 1 - I lose
 
 
 
@@ -50,6 +52,8 @@ namespace DSED_Project1_RandomGame
             ptbAlive.Visible = false;
             btnPlayAgainLose.Visible = false;
             btnPlayAgainWin.Visible = false;
+
+
         }
 
 
@@ -59,12 +63,14 @@ namespace DSED_Project1_RandomGame
 
         {
             myData.RNDGenerator();
-
-            lblBulletFire.Text = myData.Dice.ToString();
-
             Debug();
 
             btnLoad.Visible = false;
+
+            // Comment out this line now - not needed as it was my early label text to show random number 
+            //lblBulletFire.Text = myData.Dice.ToString();
+
+
         }
 
 
@@ -98,7 +104,7 @@ namespace DSED_Project1_RandomGame
                 ptbDead.BringToFront();
                 ptbDead.Visible = true;
                 myData.Lose++;
-                lblLoses.Text = myData.Lose.ToString();
+                lblLoses2.Text = myData.Lose.ToString();
                 SoundPlayer splayer = new SoundPlayer(Resource1.Winchester12_Fire);
                 splayer.Play();
 
@@ -109,6 +115,7 @@ namespace DSED_Project1_RandomGame
             Debug();
 
             myData.IsFiringThisTurn = false;
+            TotaGamesPlayed();
         }
 
         private void btnTurnAway_Click(object sender, EventArgs e)
@@ -182,6 +189,15 @@ namespace DSED_Project1_RandomGame
             btnLoad.Visible = true;
             btnTurnAway.Visible = true;
             btnFIRE.Visible = true;
+        }
+
+
+        public void TotaGamesPlayed()
+        {
+            //lblTotalGames.Text = lblLoses.Text;
+            int total;
+            total = Convert.ToInt16(lblLoses2.Text) + Convert.ToInt16(lblWins.Text);
+            lblTotalWinsAgain.Text = total.ToString();
         }
 
 

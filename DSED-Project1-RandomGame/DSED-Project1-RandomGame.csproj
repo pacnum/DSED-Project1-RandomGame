@@ -128,5 +128,11 @@
   <ItemGroup>
     <None Include="Resources\SMALL_CROWD_APPLAUSE.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
