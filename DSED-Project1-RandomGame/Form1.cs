@@ -25,6 +25,7 @@ namespace DSED_Project1_RandomGame
 
     public partial class Form1 : Form
     {
+        //Leaving these interger varablies commeneeted out to show initial code development
         //public int counter = 6;
         //public int win = 0;
         //public int lose = 0;
@@ -34,8 +35,13 @@ namespace DSED_Project1_RandomGame
 
         readonly Data myData = new Data();
 
-        //  bug fix - If dice number = 6 you never reach it so stuck in an infinite loop - Closeed
-        // bug fix - If the ProtectJacket is sleceted - player is stuck in an infinite loop - Closed
+        // bug fix location
+        //  bug fix - If dice number = 6 you never reach it so stuck in an infinite loop - Closeed 23-8
+        // bug fix - If the ProtectJacket is sleceted - player is stuck in an infinite loop - Closed 23-8
+        // bug fix - Debug displays incorrect info after creating Data Class
+        // bug fix - Random number not generated anymore ?
+
+
 
         public Form1()
         {
@@ -52,10 +58,9 @@ namespace DSED_Project1_RandomGame
         // generate a random number and add random number result to both lblButtetFire label, and this.Text string. Comment out before handing project in.
 
         {
-            Random rnd = new Random();
-            myData.dice = rnd.Next(1, 7); // Random Number between 1 and <7
+            myData.RNDGenerator();
 
-            lblBulletFire.Text = myData.dice.ToString();
+            lblBulletFire.Text = myData.Dice.ToString();
 
             Debug();
 
@@ -73,18 +78,18 @@ namespace DSED_Project1_RandomGame
             bool isSafeToFire = true;
 
             //if counter does not = random generated number and it is still safe to fire - contiune the game
-            if ((myData.counter == myData.dice) && myData.IsFiringThisTurn == true)
+            if ((myData.Counter == myData.Dice) && myData.IsFiringThisTurn == true)
             {
                 ptbAlive.Visible = true;
                 ptbAlive.BringToFront();
                 btnPlayAgainWin.Visible = true;
                 btnPlayAgainWin.BringToFront();
-                myData.win++;
-                lblWins.Text = myData.win.ToString();
+                myData.Win++;
+                lblWins.Text = myData.Win.ToString();
                 SoundPlayer splayer = new SoundPlayer(Resource1.SMALL_CROWD_APPLAUSE);
                 splayer.Play();
             }
-            if ((myData.counter == myData.dice) && myData.IsFiringThisTurn == false)
+            if ((myData.Counter == myData.Dice) && myData.IsFiringThisTurn == false)
             //otherwise it is not safe to fire, and you have now been shot.
             {
                 isSafeToFire = false;
@@ -92,15 +97,14 @@ namespace DSED_Project1_RandomGame
                 btnPlayAgainLose.Visible = true;
                 ptbDead.BringToFront();
                 ptbDead.Visible = true;
-                myData.lose++;
-                lblLoses.Text = myData.lose.ToString();
+                myData.Lose++;
+                lblLoses.Text = myData.Lose.ToString();
                 SoundPlayer splayer = new SoundPlayer(Resource1.Winchester12_Fire);
                 splayer.Play();
 
             }
             //Counter reduces by 1 each click ( Counter orignally 6 )
-            myData.counter--;
-            myData.counter--;
+            myData.Counter--;
 
             Debug();
 
@@ -140,7 +144,7 @@ namespace DSED_Project1_RandomGame
 
         public void Debug()
         {
-            this.Text = myData.dice.ToString() + " Counter " + myData.counter.ToString() + "  Firing " + myData.IsFiringThisTurn + "  Protect jacket " + myData.ProtectJacket;
+            this.Text = myData.Dice.ToString() + " Counter " + myData.Counter.ToString() + "  Firing " + myData.IsFiringThisTurn + "  Protect jacket " + myData.ProtectJacket;
         }
 
         public void btnPlayAgain_Click(object sender, EventArgs e)
@@ -156,7 +160,7 @@ namespace DSED_Project1_RandomGame
         {
             ptbDead.Visible = false;
             btnPlayAgainLose.Visible = false;
-            myData.counter = 6;
+            myData.Counter = 6;
             myData.ProtectJacket = 2;
             btnLoad.Visible = true;
             btnTurnAway.Visible = true;
@@ -173,7 +177,7 @@ namespace DSED_Project1_RandomGame
         {
             ptbAlive.Visible = false;
             btnPlayAgainWin.Visible = false;
-            myData.counter = 6;
+            myData.Counter = 6;
             myData.ProtectJacket = 2;
             btnLoad.Visible = true;
             btnTurnAway.Visible = true;

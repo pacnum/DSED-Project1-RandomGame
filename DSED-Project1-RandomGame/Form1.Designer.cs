@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblWins = new System.Windows.Forms.Label();
             this.lblLoses = new System.Windows.Forms.Label();
             this.lblBulletFire = new System.Windows.Forms.Label();
@@ -41,8 +40,6 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.ptbDead = new System.Windows.Forms.PictureBox();
             this.ptbAlive = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlive)).BeginInit();
             this.SuspendLayout();
@@ -150,8 +147,10 @@
             this.btnLoad.TabIndex = 0;
             this.btnLoad.Text = "LOAD";
             this.btnLoad.UseVisualStyleBackColor = true;
-
-
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // ptbDead
+            // 
             this.ptbDead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbDead.Image = global::DSED_Project1_RandomGame.Properties.Resources.dead;
             this.ptbDead.Location = new System.Drawing.Point(45, 41);
@@ -161,6 +160,9 @@
             this.ptbDead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ptbDead.TabIndex = 8;
             this.ptbDead.TabStop = false;
+            // 
+            // ptbAlive
+            // 
             this.ptbAlive.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbAlive.Image = global::DSED_Project1_RandomGame.Properties.Resources.joyful;
             this.ptbAlive.Location = new System.Drawing.Point(27, 35);
@@ -170,10 +172,6 @@
             this.ptbAlive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ptbAlive.TabIndex = 10;
             this.ptbAlive.TabStop = false;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Tag = "This is a tool tip";
             // 
             // Form1
             // 
@@ -216,8 +214,6 @@
         private System.Windows.Forms.Button btnPlayAgainLose;
         private System.Windows.Forms.PictureBox ptbAlive;
         private System.Windows.Forms.Button btnPlayAgainWin;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
 
