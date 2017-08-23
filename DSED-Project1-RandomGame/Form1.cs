@@ -35,11 +35,11 @@ namespace DSED_Project1_RandomGame
 
         readonly Data myData = new Data();
 
-        // bug fix location
+        // BUG FIX Headline
         //  bug fix - If dice number = 6 you never reach it so stuck in an infinite loop - Closeed 23-8
         // bug fix - If the ProtectJacket is sleceted - player is stuck in an infinite loop - Closed 23-8
-        // bug fix - Debug displays incorrect info after creating Data Class
-        // bug fix - Random number not generated anymore ?
+        // bug fix - Debug displays incorrect info after creating Data Class - bug fixed 23-8
+        // bug fix - Random number not generated anymore  - Bug Fixed 23-8
 
 
 
@@ -104,8 +104,8 @@ namespace DSED_Project1_RandomGame
 
             }
             //Counter reduces by 1 each click ( Counter orignally 6 )
-            myData.Counter--;
-
+            // myData.Counter--;
+            myData.Countdown();
             Debug();
 
             myData.IsFiringThisTurn = false;

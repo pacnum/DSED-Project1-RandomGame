@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSED_Project1_RandomGame
 {
-    class Data
+    public class Data
     {
         // public int counter = 6;
         // public int win = 0;
@@ -25,6 +25,15 @@ namespace DSED_Project1_RandomGame
         {
             Random rnd = new Random();
             Dice = rnd.Next(1, 7); // Random Number between 1 and <7
+
+
+        }
+
+
+        public void Countdown()
+        {
+            Counter--;
+            // return Counter;
 
 
         }
