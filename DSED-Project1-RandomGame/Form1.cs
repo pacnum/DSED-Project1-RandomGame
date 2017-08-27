@@ -66,6 +66,7 @@ namespace DSED_Project1_RandomGame
             Debug();
 
             btnLoad.Visible = false;
+            myData.RNDGenerator(); // Doubling the random number that is generated
 
             // Comment out this line now - not needed as it was my early label text to show random number 
             //lblBulletFire.Text = myData.Dice.ToString();
@@ -119,9 +120,9 @@ namespace DSED_Project1_RandomGame
         }
 
         private void btnTurnAway_Click(object sender, EventArgs e)
-        //todo create  fire away code where you can fire away for two times only. Use a boolean to say when you cannot fire away any more
+        //todo create  fire away code where you can fire away for two times only. Use a boolean to say when you cannot fire away any more - complete 28-8
 
-        //todo must say when you ARE actually firing away, so you can see if the peson lives.
+        //todo must say when you ARE actually firing away, so you can see if the peson lives. - Complete - 28-8
         {
             Debug();
 
@@ -132,7 +133,7 @@ namespace DSED_Project1_RandomGame
 
         private void TurnAway()
         {
-            if (myData.ProtectJacket > 1)
+            if (myData.ProtectJacket > 0)
             {
                 //Decrease ProtectJacket by 1 and reduce counter by 1
                 myData.IsFiringThisTurn = true;
@@ -161,6 +162,7 @@ namespace DSED_Project1_RandomGame
 
         {
             PlayAgainLose();
+            myData.RNDGenerator();
         }
 
         public void PlayAgainLose()
@@ -177,6 +179,7 @@ namespace DSED_Project1_RandomGame
         public void btnPlayAgainWin_Click(object sender, EventArgs e)
         {
             PlayAgainWin();
+            myData.RNDGenerator();
         }
 
         public void PlayAgainWin()
