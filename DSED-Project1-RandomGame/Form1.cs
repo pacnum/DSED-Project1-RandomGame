@@ -128,25 +128,39 @@ namespace DSED_Project1_RandomGame
 
             TurnAway();
 
+            TurnAwayCounter();
+
             Debug();
         }
 
         private void TurnAway()
         {
-            if (myData.ProtectJacket > 0)
+            if (myData.ProtectJacket > 0) //Changed value from 1 to 0 (was only allowing 1 safe jacket protection.
             {
                 //Decrease ProtectJacket by 1 and reduce counter by 1
                 myData.IsFiringThisTurn = true;
                 myData.ProtectJacket--;
                 // counter--;
                 //ProtectJacket is currently Visable
-                btnTurnAway.Visible = true;
+                //btnTurnAway.Visible = true;
             }
             else
             {
                 myData.IsFiringThisTurn = false;
                 //ProtectJacket is now hidden (has been clicked 2 times)
+                //btnTurnAway.Visible = false;
+            }
+        }
+
+        private void TurnAwayCounter()
+        {
+            if (myData.ProtectJacket == 0)
+            {
                 btnTurnAway.Visible = false;
+            }
+            else
+            {
+                btnTurnAway.Visible = true;
             }
         }
 
