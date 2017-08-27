@@ -26,7 +26,7 @@ namespace DSED_Project1_RandomGame
 
     public partial class Form1 : Form
     {
-        //Leaving these interger varablies commeneeted out to show initial code development
+        //Leaving these integer variables commented out to show initial code development
         //public int counter = 6;
         //public int win = 0;
         //public int lose = 0;
@@ -38,7 +38,7 @@ namespace DSED_Project1_RandomGame
 
         // BUG FIX Headline
         //  bug fix - If dice number = 6 you never reach it so stuck in an infinite loop - Closeed 23-8
-        // bug fix - If the ProtectJacket is sleceted - player is stuck in an infinite loop - Closed 23-8
+        // bug fix - If the ProtectJacket is selected - player is stuck in an infinite loop - Closed 23-8
         // bug fix - Debug displays incorrect info after creating Data Class - bug fixed 23-8
         // bug fix - Random number not generated anymore  - Bug Fixed 23-8
         //bug fix - if jacket is @ 1 - I lose
@@ -66,7 +66,8 @@ namespace DSED_Project1_RandomGame
             Debug();
 
             btnLoad.Visible = false;
-            myData.RNDGenerator(); // Doubling the random number that is generated
+            // running the random number generator again to reduce the chance of the same random number being called again.
+            myData.RNDGenerator();
 
             // Comment out this line now - not needed as it was my early label text to show random number 
             //lblBulletFire.Text = myData.Dice.ToString();
@@ -77,7 +78,7 @@ namespace DSED_Project1_RandomGame
 
         private void btnFIRE_Click(object sender, EventArgs e)
         // if the count down equals the rnd AND fireaway equals false - you lose
-        // create  count down code under fire button to count down from 6 to 1
+        // create count down code under fire button to count down from 6 to 1
         // create a button click to count down the fireaway
 
         {
@@ -120,9 +121,9 @@ namespace DSED_Project1_RandomGame
         }
 
         private void btnTurnAway_Click(object sender, EventArgs e)
-        //todo create  fire away code where you can fire away for two times only. Use a boolean to say when you cannot fire away any more - complete 28-8
+        //todo create  fire away code where you can fire away for two times only. Use a bool to say when you cannot fire away any more - complete 28-8
 
-        //todo must say when you ARE actually firing away, so you can see if the peson lives. - Complete - 28-8
+        //todo must say when you ARE actually firing away, so you can see if the person lives. - Complete - 28-8
         {
             Debug();
 
