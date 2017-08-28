@@ -41,7 +41,7 @@ namespace DSED_Project1_RandomGame
         // bug fix - If the ProtectJacket is selected - player is stuck in an infinite loop - Closed 23-8
         // bug fix - Debug displays incorrect info after creating Data Class - bug fixed 23-8
         // bug fix - Random number not generated anymore  - Bug Fixed 23-8
-        //bug fix - if jacket is @ 1 - I lose
+        //bug fix - if jacket is @ 1 - I lose - Fixed 28-8
 
 
 
@@ -206,18 +206,22 @@ namespace DSED_Project1_RandomGame
 
         public void TotaGamesPlayed()
         {
-            //lblTotalGames.Text = lblLoses.Text;
+            TotalScores();
+        }
+
+        private void TotalScores()
+        {
             int total;
             total = Convert.ToInt16(lblLoses2.Text) + Convert.ToInt16(lblWins.Text);
             lblTotalWinsAgain.Text = total.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHelp_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            HelpButtonClick();
         }
 
-        private void btnHelp_Click_1(object sender, EventArgs e)
+        private void HelpButtonClick()
         {
             rtbHelpScreen.Visible = true;
             btnHelp.Visible = false;
@@ -226,9 +230,21 @@ namespace DSED_Project1_RandomGame
 
         private void btnLetsPlay_Click(object sender, EventArgs e)
         {
+            LetsPlayButtonClick();
+        }
+
+        private void LetsPlayButtonClick()
+        {
             rtbHelpScreen.Visible = false;
             btnLetsPlay.Visible = false;
             btnHelp.Visible = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
+
 }
