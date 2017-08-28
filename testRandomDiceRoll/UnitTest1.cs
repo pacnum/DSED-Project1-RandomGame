@@ -36,11 +36,6 @@ namespace testRandomDiceRoll
             Assert.AreEqual(5, Actual);
         }
 
-        //[TestMethod]
-        //{
-
-        //}
-
 
     }
 }

@@ -128,7 +128,7 @@ How to Play
 This is a simple Russian Roulette game.
 The aim of this game is to load the gun and fire.
 If you shoot yourself, you lose, if you shoot with the protective jacket on – you win.
-There is 1 bullet, in one of 6 chambers, with 2 chances to wear the protective jacket
+There is 1 bullet, in one of the 6 chambers, with 2 chances to wear the protective jacket
 
 
 Step 1
@@ -136,9 +136,11 @@ Load the Gun by clicking the Load Button
  
 Step 2
 Choose if you want to wear the protective jacket
-If you do wish to wear the jacket, click the button, and then fire the gun.
+If you do wish to wear the jacket, click the jacket button, and then fire the gun.
 (you have 2 chances to wear the jacket)
+
 If you choose not to wear the jacket, fire the gun and hope the bullet is NOT in the chamber.
+
 If you win or lose, you can play again by clicking the play again button.
 
 The Win and Loss totals are shown at the top of the screen.

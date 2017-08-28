@@ -72,7 +72,7 @@
             // lblBulletFire
             // 
             this.lblBulletFire.AllowDrop = true;
-            this.lblBulletFire.Location = new System.Drawing.Point(844, 59);
+            this.lblBulletFire.Location = new System.Drawing.Point(743, 57);
             this.lblBulletFire.Name = "lblBulletFire";
             this.lblBulletFire.Size = new System.Drawing.Size(150, 49);
             this.lblBulletFire.TabIndex = 7;
@@ -216,10 +216,10 @@
             // 
             this.ptbAlive.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbAlive.Image = global::DSED_Project1_RandomGame.Properties.Resources.joyful;
-            this.ptbAlive.Location = new System.Drawing.Point(103, 35);
+            this.ptbAlive.Location = new System.Drawing.Point(46, 35);
             this.ptbAlive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptbAlive.Name = "ptbAlive";
-            this.ptbAlive.Size = new System.Drawing.Size(954, 780);
+            this.ptbAlive.Size = new System.Drawing.Size(986, 781);
             this.ptbAlive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ptbAlive.TabIndex = 10;
             this.ptbAlive.TabStop = false;
@@ -227,9 +227,9 @@
             // rtbHelpScreen
             // 
             this.rtbHelpScreen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtbHelpScreen.Location = new System.Drawing.Point(46, 35);
+            this.rtbHelpScreen.Location = new System.Drawing.Point(61, 45);
             this.rtbHelpScreen.Name = "rtbHelpScreen";
-            this.rtbHelpScreen.Size = new System.Drawing.Size(1011, 780);
+            this.rtbHelpScreen.Size = new System.Drawing.Size(971, 770);
             this.rtbHelpScreen.TabIndex = 17;
             this.rtbHelpScreen.Text = resources.GetString("rtbHelpScreen.Text");
             this.rtbHelpScreen.Visible = false;
@@ -265,23 +265,23 @@
             this.ClientSize = new System.Drawing.Size(1283, 924);
             this.Controls.Add(this.btnLetsPlay);
             this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.rtbHelpScreen);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblLoses2);
-            this.Controls.Add(this.lblTotalWinsAgain);
-            this.Controls.Add(this.lblTotalGames);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnPlayAgainWin);
             this.Controls.Add(this.btnPlayAgainLose);
-            this.Controls.Add(this.lblBulletFire);
-            this.Controls.Add(this.lblWins);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTurnAway);
             this.Controls.Add(this.btnFIRE);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.ptbDead);
             this.Controls.Add(this.ptbAlive);
+            this.Controls.Add(this.rtbHelpScreen);
+            this.Controls.Add(this.ptbDead);
+            this.Controls.Add(this.lblLoses2);
+            this.Controls.Add(this.lblTotalWinsAgain);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblWins);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTotalGames);
+            this.Controls.Add(this.lblBulletFire);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
