@@ -203,7 +203,7 @@ namespace DSED_Project1_RandomGame
             btnFIRE.Visible = true;
         }
 
-
+        //This code creates a Total Score value by converting both wins and losses to an interger, and parsing this info into the total wins (again) label.
         public void TotaGamesPlayed()
         {
             TotalScores();
@@ -216,6 +216,8 @@ namespace DSED_Project1_RandomGame
             lblTotalWinsAgain.Text = total.ToString();
         }
 
+        //Created a help file / text box for users new to playing this game.
+        //the help file expalins the rules for this game, and advises how to play the game.
         private void btnHelp_Click_1(object sender, EventArgs e)
         {
             HelpButtonClick();
@@ -228,6 +230,7 @@ namespace DSED_Project1_RandomGame
             btnLetsPlay.Visible = true;
         }
 
+        //Creates a lets play button.  Afer a user has checked the how to play button, this option shows, allowing the user to go back and play the game.
         private void btnLetsPlay_Click(object sender, EventArgs e)
         {
             LetsPlayButtonClick();
@@ -240,6 +243,8 @@ namespace DSED_Project1_RandomGame
             btnHelp.Visible = true;
         }
 
+
+        //this code closes the application.
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
