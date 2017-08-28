@@ -133,6 +133,16 @@ namespace DSED_Project1_RandomGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap power_circular_button {
+            get {
+                object obj = ResourceManager.GetObject("power-circular-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap revolver {
             get {
                 object obj = ResourceManager.GetObject("revolver", resourceCulture);
@@ -156,6 +166,16 @@ namespace DSED_Project1_RandomGame.Properties {
         internal static System.Drawing.Bitmap right__1_ {
             get {
                 object obj = ResourceManager.GetObject("right (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vZplQ {
+            get {
+                object obj = ResourceManager.GetObject("vZplQ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

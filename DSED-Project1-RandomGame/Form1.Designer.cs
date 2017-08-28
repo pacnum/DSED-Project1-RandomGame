@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblWins = new System.Windows.Forms.Label();
             this.lblLoses = new System.Windows.Forms.Label();
             this.lblBulletFire = new System.Windows.Forms.Label();
             this.btnPlayAgainLose = new System.Windows.Forms.Button();
             this.btnPlayAgainWin = new System.Windows.Forms.Button();
+            this.lblTotalGames = new System.Windows.Forms.Label();
+            this.lblTotalWinsAgain = new System.Windows.Forms.Label();
+            this.lblLoses2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,9 +46,9 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.ptbDead = new System.Windows.Forms.PictureBox();
             this.ptbAlive = new System.Windows.Forms.PictureBox();
-            this.lblTotalGames = new System.Windows.Forms.Label();
-            this.lblTotalWinsAgain = new System.Windows.Forms.Label();
-            this.lblLoses2 = new System.Windows.Forms.Label();
+            this.rtbHelpScreen = new System.Windows.Forms.RichTextBox();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnLetsPlay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlive)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +102,44 @@
             this.btnPlayAgainWin.UseVisualStyleBackColor = false;
             this.btnPlayAgainWin.Click += new System.EventHandler(this.btnPlayAgainWin_Click);
             // 
+            // lblTotalGames
+            // 
+            this.lblTotalGames.Location = new System.Drawing.Point(755, 60);
+            this.lblTotalGames.Name = "lblTotalGames";
+            this.lblTotalGames.Size = new System.Drawing.Size(112, 49);
+            this.lblTotalGames.TabIndex = 13;
+            this.lblTotalGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalWinsAgain
+            // 
+            this.lblTotalWinsAgain.Location = new System.Drawing.Point(755, 60);
+            this.lblTotalWinsAgain.Name = "lblTotalWinsAgain";
+            this.lblTotalWinsAgain.Size = new System.Drawing.Size(112, 49);
+            this.lblTotalWinsAgain.TabIndex = 14;
+            this.lblTotalWinsAgain.Text = "0";
+            this.lblTotalWinsAgain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLoses2
+            // 
+            this.lblLoses2.Location = new System.Drawing.Point(449, 58);
+            this.lblLoses2.Name = "lblLoses2";
+            this.lblLoses2.Size = new System.Drawing.Size(112, 49);
+            this.lblLoses2.TabIndex = 15;
+            this.lblLoses2.Text = "0";
+            this.lblLoses2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::DSED_Project1_RandomGame.Properties.Resources.power_circular_button;
+            this.button1.Location = new System.Drawing.Point(1161, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 93);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label3
             // 
             this.label3.Image = global::DSED_Project1_RandomGame.Properties.Resources.right__1_;
@@ -131,7 +174,6 @@
             this.btnTurnAway.Name = "btnTurnAway";
             this.btnTurnAway.Size = new System.Drawing.Size(161, 200);
             this.btnTurnAway.TabIndex = 2;
-            this.btnTurnAway.Text = "Turn Away";
             this.btnTurnAway.UseVisualStyleBackColor = true;
             this.btnTurnAway.Click += new System.EventHandler(this.btnTurnAway_Click);
             // 
@@ -143,7 +185,6 @@
             this.btnFIRE.Name = "btnFIRE";
             this.btnFIRE.Size = new System.Drawing.Size(231, 101);
             this.btnFIRE.TabIndex = 1;
-            this.btnFIRE.Text = "FIRE";
             this.btnFIRE.UseVisualStyleBackColor = true;
             this.btnFIRE.Click += new System.EventHandler(this.btnFIRE_Click);
             // 
@@ -175,7 +216,7 @@
             // 
             this.ptbAlive.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbAlive.Image = global::DSED_Project1_RandomGame.Properties.Resources.joyful;
-            this.ptbAlive.Location = new System.Drawing.Point(27, 35);
+            this.ptbAlive.Location = new System.Drawing.Point(103, 35);
             this.ptbAlive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ptbAlive.Name = "ptbAlive";
             this.ptbAlive.Size = new System.Drawing.Size(954, 780);
@@ -183,37 +224,49 @@
             this.ptbAlive.TabIndex = 10;
             this.ptbAlive.TabStop = false;
             // 
-            // lblTotalGames
+            // rtbHelpScreen
             // 
-            this.lblTotalGames.Location = new System.Drawing.Point(755, 60);
-            this.lblTotalGames.Name = "lblTotalGames";
-            this.lblTotalGames.Size = new System.Drawing.Size(112, 49);
-            this.lblTotalGames.TabIndex = 13;
-            this.lblTotalGames.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rtbHelpScreen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rtbHelpScreen.Location = new System.Drawing.Point(46, 35);
+            this.rtbHelpScreen.Name = "rtbHelpScreen";
+            this.rtbHelpScreen.Size = new System.Drawing.Size(1011, 780);
+            this.rtbHelpScreen.TabIndex = 17;
+            this.rtbHelpScreen.Text = resources.GetString("rtbHelpScreen.Text");
+            this.rtbHelpScreen.Visible = false;
             // 
-            // lblTotalWinsAgain
+            // btnHelp
             // 
-            this.lblTotalWinsAgain.Location = new System.Drawing.Point(755, 60);
-            this.lblTotalWinsAgain.Name = "lblTotalWinsAgain";
-            this.lblTotalWinsAgain.Size = new System.Drawing.Size(112, 49);
-            this.lblTotalWinsAgain.TabIndex = 14;
-            this.lblTotalWinsAgain.Text = "0";
-            this.lblTotalWinsAgain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelp.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHelp.Location = new System.Drawing.Point(1136, 154);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(135, 81);
+            this.btnHelp.TabIndex = 18;
+            this.btnHelp.Text = "Help Button";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click_1);
             // 
-            // lblLoses2
+            // btnLetsPlay
             // 
-            this.lblLoses2.Location = new System.Drawing.Point(449, 58);
-            this.lblLoses2.Name = "lblLoses2";
-            this.lblLoses2.Size = new System.Drawing.Size(112, 49);
-            this.lblLoses2.TabIndex = 15;
-            this.lblLoses2.Text = "0";
-            this.lblLoses2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLetsPlay.BackColor = System.Drawing.Color.Lime;
+            this.btnLetsPlay.Location = new System.Drawing.Point(1136, 154);
+            this.btnLetsPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLetsPlay.Name = "btnLetsPlay";
+            this.btnLetsPlay.Size = new System.Drawing.Size(135, 81);
+            this.btnLetsPlay.TabIndex = 19;
+            this.btnLetsPlay.Text = "Lets Play the Game";
+            this.btnLetsPlay.UseVisualStyleBackColor = false;
+            this.btnLetsPlay.Click += new System.EventHandler(this.btnLetsPlay_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 924);
+            this.ClientSize = new System.Drawing.Size(1283, 924);
+            this.Controls.Add(this.btnLetsPlay);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.rtbHelpScreen);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblLoses2);
             this.Controls.Add(this.lblTotalWinsAgain);
             this.Controls.Add(this.lblTotalGames);
@@ -257,6 +310,10 @@
         private System.Windows.Forms.Label lblTotalGames;
         private System.Windows.Forms.Label lblTotalWinsAgain;
         private System.Windows.Forms.Label lblLoses2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox rtbHelpScreen;
+        private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnLetsPlay;
     }
 }
 

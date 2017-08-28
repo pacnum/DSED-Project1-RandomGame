@@ -14,7 +14,7 @@ namespace DSED_Project1_RandomGame
 {
     // What your project needs.
     // At least one class - Complete
-    // At least two Unit Tests of major parts
+    // At least two Unit Tests of major parts - Complete
     // At least one sound - Complete
     // At least one image - Complete
     // Sound and image should be loaded from the resource folder. - Complete
@@ -52,8 +52,7 @@ namespace DSED_Project1_RandomGame
             ptbAlive.Visible = false;
             btnPlayAgainLose.Visible = false;
             btnPlayAgainWin.Visible = false;
-
-
+            btnLetsPlay.Visible = false;
         }
 
 
@@ -64,10 +63,7 @@ namespace DSED_Project1_RandomGame
         {
             myData.RNDGenerator();
             Debug();
-
             btnLoad.Visible = false;
-            // running the random number generator again to reduce the chance of the same random number being called again.
-            myData.RNDGenerator();
 
             // Comment out this line now - not needed as it was my early label text to show random number 
             //lblBulletFire.Text = myData.Dice.ToString();
@@ -177,7 +173,6 @@ namespace DSED_Project1_RandomGame
 
         {
             PlayAgainLose();
-            myData.RNDGenerator();
         }
 
         public void PlayAgainLose()
@@ -194,7 +189,6 @@ namespace DSED_Project1_RandomGame
         public void btnPlayAgainWin_Click(object sender, EventArgs e)
         {
             PlayAgainWin();
-            myData.RNDGenerator();
         }
 
         public void PlayAgainWin()
@@ -218,6 +212,23 @@ namespace DSED_Project1_RandomGame
             lblTotalWinsAgain.Text = total.ToString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void btnHelp_Click_1(object sender, EventArgs e)
+        {
+            rtbHelpScreen.Visible = true;
+            btnHelp.Visible = false;
+            btnLetsPlay.Visible = true;
+        }
+
+        private void btnLetsPlay_Click(object sender, EventArgs e)
+        {
+            rtbHelpScreen.Visible = false;
+            btnLetsPlay.Visible = false;
+            btnHelp.Visible = true;
+        }
     }
 }
