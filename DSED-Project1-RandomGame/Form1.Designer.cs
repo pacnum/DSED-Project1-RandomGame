@@ -37,7 +37,7 @@
             this.lblTotalGames = new System.Windows.Forms.Label();
             this.lblTotalWinsAgain = new System.Windows.Forms.Label();
             this.lblLoses2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCloseGame = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -128,17 +128,17 @@
             this.lblLoses2.Text = "0";
             this.lblLoses2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnCloseGame
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = global::DSED_Project1_RandomGame.Properties.Resources.power_circular_button;
-            this.button1.Location = new System.Drawing.Point(1161, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 93);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCloseGame.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCloseGame.Image = global::DSED_Project1_RandomGame.Properties.Resources.power_circular_button;
+            this.btnCloseGame.Location = new System.Drawing.Point(1161, 35);
+            this.btnCloseGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCloseGame.Name = "btnCloseGame";
+            this.btnCloseGame.Size = new System.Drawing.Size(110, 93);
+            this.btnCloseGame.TabIndex = 16;
+            this.btnCloseGame.UseVisualStyleBackColor = false;
+            this.btnCloseGame.Click += new System.EventHandler(this.btnCloseGame_Click_1);
             // 
             // label3
             // 
@@ -265,7 +265,7 @@
             this.ClientSize = new System.Drawing.Size(1283, 924);
             this.Controls.Add(this.btnLetsPlay);
             this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCloseGame);
             this.Controls.Add(this.btnPlayAgainWin);
             this.Controls.Add(this.btnPlayAgainLose);
             this.Controls.Add(this.btnTurnAway);
@@ -273,13 +273,13 @@
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.ptbAlive);
             this.Controls.Add(this.rtbHelpScreen);
-            this.Controls.Add(this.ptbDead);
             this.Controls.Add(this.lblLoses2);
             this.Controls.Add(this.lblTotalWinsAgain);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblWins);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ptbDead);
             this.Controls.Add(this.lblTotalGames);
             this.Controls.Add(this.lblBulletFire);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,7 +310,7 @@
         private System.Windows.Forms.Label lblTotalGames;
         private System.Windows.Forms.Label lblTotalWinsAgain;
         private System.Windows.Forms.Label lblLoses2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCloseGame;
         private System.Windows.Forms.RichTextBox rtbHelpScreen;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnLetsPlay;

@@ -245,11 +245,10 @@ namespace DSED_Project1_RandomGame
 
 
         //this code closes the application.
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCloseGame_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
     }
 
 }
