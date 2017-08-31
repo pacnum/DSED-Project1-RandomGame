@@ -80,7 +80,7 @@ namespace DSED_Project1_RandomGame
         {
 
             bool isSafeToFire = true;
-            SoundPlayer Blank = new SoundPlayer(Resource1.Shotgun_Blank); Blank.Play();
+           
 
             //if counter does not = random generated number and it is still safe to fire - contiune the game
             if ((myData.Counter == myData.Dice) && myData.IsFiringThisTurn == true)
@@ -112,6 +112,7 @@ namespace DSED_Project1_RandomGame
             // myData.Counter--;
             myData.Countdown();
             Debug();
+
             TotaGamesPlayed();
         }
 
@@ -248,6 +249,7 @@ namespace DSED_Project1_RandomGame
         {
             Application.Exit();
         }
+
     }
 
 }

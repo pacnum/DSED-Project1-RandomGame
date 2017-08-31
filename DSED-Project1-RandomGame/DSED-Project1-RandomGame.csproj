@@ -140,5 +140,11 @@
   <ItemGroup>
     <None Include="Resources\power-circular-button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smiling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smiling %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

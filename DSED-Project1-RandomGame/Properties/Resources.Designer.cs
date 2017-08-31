@@ -173,6 +173,26 @@ namespace DSED_Project1_RandomGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap smiling {
+            get {
+                object obj = ResourceManager.GetObject("smiling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smiling__1_ {
+            get {
+                object obj = ResourceManager.GetObject("smiling (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vZplQ {
             get {
                 object obj = ResourceManager.GetObject("vZplQ", resourceCulture);
