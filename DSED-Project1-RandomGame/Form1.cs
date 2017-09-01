@@ -63,6 +63,7 @@ namespace DSED_Project1_RandomGame
         {
             myData.RNDGenerator();
             Debug();
+            //bool isSafeToFire = false;
             btnLoad.Visible = false;
 
             // Comment out this line now - not needed as it was my early label text to show random number 
@@ -80,7 +81,7 @@ namespace DSED_Project1_RandomGame
         {
 
             bool isSafeToFire = true;
-           
+
 
             //if counter does not = random generated number and it is still safe to fire - contiune the game
             if ((myData.Counter == myData.Dice) && myData.IsFiringThisTurn == true)
@@ -109,10 +110,10 @@ namespace DSED_Project1_RandomGame
 
             }
             //Counter reduces by 1 each click ( Counter orignally 6 )
-            // myData.Counter--;
+            //myData.Counter--;
             myData.Countdown();
             Debug();
-
+            myData.IsFiringThisTurn = false;
             TotaGamesPlayed();
         }
 
@@ -250,6 +251,10 @@ namespace DSED_Project1_RandomGame
             Application.Exit();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

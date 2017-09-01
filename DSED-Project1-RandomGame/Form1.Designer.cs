@@ -40,7 +40,6 @@
             this.rtbHelpScreen = new System.Windows.Forms.RichTextBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnLetsPlay = new System.Windows.Forms.Button();
-            this.ptbSafe = new System.Windows.Forms.PictureBox();
             this.btnCloseGame = new System.Windows.Forms.Button();
             this.btnTurnAway = new System.Windows.Forms.Button();
             this.btnFIRE = new System.Windows.Forms.Button();
@@ -50,9 +49,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ptbDead = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSafe)).BeginInit();
+            this.ptbSafe = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSafe)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblWins
@@ -133,7 +135,7 @@
             // rtbHelpScreen
             // 
             this.rtbHelpScreen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtbHelpScreen.Location = new System.Drawing.Point(61, 45);
+            this.rtbHelpScreen.Location = new System.Drawing.Point(52, 43);
             this.rtbHelpScreen.Name = "rtbHelpScreen";
             this.rtbHelpScreen.Size = new System.Drawing.Size(971, 770);
             this.rtbHelpScreen.TabIndex = 17;
@@ -163,19 +165,6 @@
             this.btnLetsPlay.Text = "Lets Play the Game";
             this.btnLetsPlay.UseVisualStyleBackColor = false;
             this.btnLetsPlay.Click += new System.EventHandler(this.btnLetsPlay_Click);
-            // 
-            // ptbSafe
-            // 
-            this.ptbSafe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptbSafe.BackColor = System.Drawing.Color.Transparent;
-            this.ptbSafe.Image = global::DSED_Project1_RandomGame.Properties.Resources.smiling__1_;
-            this.ptbSafe.Location = new System.Drawing.Point(46, 35);
-            this.ptbSafe.Name = "ptbSafe";
-            this.ptbSafe.Size = new System.Drawing.Size(986, 716);
-            this.ptbSafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ptbSafe.TabIndex = 20;
-            this.ptbSafe.TabStop = false;
-            this.ptbSafe.Visible = false;
             // 
             // btnCloseGame
             // 
@@ -225,7 +214,6 @@
             // 
             // ptbAlive
             // 
-            this.ptbAlive.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbAlive.Image = global::DSED_Project1_RandomGame.Properties.Resources.joyful;
             this.ptbAlive.Location = new System.Drawing.Point(46, 35);
             this.ptbAlive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -273,38 +261,62 @@
             this.ptbDead.TabIndex = 8;
             this.ptbDead.TabStop = false;
             // 
+            // ptbSafe
+            // 
+            this.ptbSafe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbSafe.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSafe.Image = global::DSED_Project1_RandomGame.Properties.Resources.smiling__1_;
+            this.ptbSafe.Location = new System.Drawing.Point(299, 743);
+            this.ptbSafe.Name = "ptbSafe";
+            this.ptbSafe.Size = new System.Drawing.Size(986, 716);
+            this.ptbSafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ptbSafe.TabIndex = 20;
+            this.ptbSafe.TabStop = false;
+            this.ptbSafe.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnFIRE);
+            this.panel1.Controls.Add(this.lblWins);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblBulletFire);
+            this.panel1.Controls.Add(this.lblTotalGames);
+            this.panel1.Controls.Add(this.ptbDead);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTotalWinsAgain);
+            this.panel1.Controls.Add(this.lblLoses2);
+            this.panel1.Controls.Add(this.rtbHelpScreen);
+            this.panel1.Controls.Add(this.btnTurnAway);
+            this.panel1.Controls.Add(this.btnPlayAgainWin);
+            this.panel1.Controls.Add(this.btnPlayAgainLose);
+            this.panel1.Controls.Add(this.btnLoad);
+            this.panel1.Controls.Add(this.btnCloseGame);
+            this.panel1.Controls.Add(this.btnHelp);
+            this.panel1.Controls.Add(this.ptbAlive);
+            this.panel1.Controls.Add(this.ptbSafe);
+            this.panel1.Controls.Add(this.btnLetsPlay);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 921);
+            this.panel1.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 924);
-            this.Controls.Add(this.ptbSafe);
-            this.Controls.Add(this.btnLetsPlay);
-            this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.btnCloseGame);
-            this.Controls.Add(this.btnPlayAgainWin);
-            this.Controls.Add(this.btnPlayAgainLose);
-            this.Controls.Add(this.btnTurnAway);
-            this.Controls.Add(this.btnFIRE);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.ptbAlive);
-            this.Controls.Add(this.rtbHelpScreen);
-            this.Controls.Add(this.lblLoses2);
-            this.Controls.Add(this.lblTotalWinsAgain);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblWins);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ptbDead);
-            this.Controls.Add(this.lblTotalGames);
-            this.Controls.Add(this.lblBulletFire);
+            this.ClientSize = new System.Drawing.Size(1264, 921);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSafe)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAlive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSafe)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,6 +344,7 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnLetsPlay;
         private System.Windows.Forms.PictureBox ptbSafe;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
